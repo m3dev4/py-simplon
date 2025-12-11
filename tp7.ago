@@ -1,0 +1,127 @@
+fonction Moyenne (t, n) : reel
+  Début
+    somme <- 0
+
+    Pour i <- 1 à n faire
+     somme <- somme + t[i]
+    FinPour
+
+    Retourner somme / n
+FinFonction
+
+
+Debut 
+  Declarer Note[5]
+  Note[1] <- 12
+  Note[2] <- 7
+  Note[3] <- 9
+  Note[4] <- 4
+  Note[5] <- 48
+
+  n <- 5
+
+  resultat <- Moyenne(Notes, n)
+  afficher("La moyenne est: ", resultat)
+  
+
+  -------------------------------------------------------------
+
+ Exercice 9 – 
+ 
+fonction Rechercher(t, n, valeur): booelan
+   pour i <- i à n
+        Si t[i] = valeur alors
+        Retourner Vrai
+        FinSi
+    FinPour
+FinFonction
+
+Debut 
+  T <- tableau[7]
+
+  T[1] <- 9
+  T[2] <- 92
+  T[3] <- 4
+  T[4] <- 10
+  T[5] <- 2
+  T[6] <- 1
+  T[7] <- 5
+
+  N <- 7 
+
+  valeur <- 5
+
+  resultat <- Rechercher(T, N, valeur)
+
+  Si resultat = Vrai alors
+    affiche("La valeur existe dans le tableau)
+  Sinon
+   affiche("La valeur ne figure pas dans le tableau)
+  FinSi 
+Fin
+
+-----------------------------------------_-------------------------------------
+
+Exercice 10 –  
+
+
+fonction NombreOccurrences(T, N, valeur): entier
+ compteur <- 0
+ Pour i <- i à N 
+  Si T[i] valeur  Alors
+    compteur <- compteur + 1
+  FinSi
+ FinPour
+FinFonction
+
+Debut
+ T <- tableau[10]
+
+ pour i <- i à 10 
+  ecrire("Ecrire le nombre ", i, " : ")
+  lire(T[i])
+
+  N <- 10 
+
+  resultat <- NombreOccurrences(T, N, valeur)
+  ecrire("La valeur ", valeur, "apparait ", resultat, " fois dans le tableau")
+
+fin 
+
+
+
+
+----------------------------------------------
+
+Algorithme Palindrome
+
+variable 
+
+mot: chaine
+i, j: entier 
+isPalindrome: booelan
+
+Debut
+   ecrire("Entrer un mot: ")
+   lire(mot)
+
+   i <- 1
+   j <- longueur(mot)
+   isPalindrome <- Vrai 
+   
+   Tant que i < j faire
+     Si mot[i] != mot[j] alors
+      isPalindrome <- Faux
+    FinSi
+
+    i <- j + 1
+    j <- j - 1
+  Fin Tant Que 
+
+  SI isPalindrome alors 
+   affiche("Ce mot est Palindrome)
+  Sinon 
+    affiche("Ce mot n'est pas Palindrome")
+  FinSi
+
+fin
